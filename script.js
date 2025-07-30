@@ -5,6 +5,7 @@ setTimeout(() => {
   audio.loop = true;
   audio.play().catch((error) => {
     console.error("Error al reproducir el audio:", error);
+    audio.currentTime = 0; // Reiniciar el audio
   });
 }, 1500); // Inicia los fuegos luego de 3s
 
