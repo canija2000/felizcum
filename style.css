@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  background-color: #000;
+  font-family: "Arial", sans-serif;
+}
+
+#fireworks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.center-container {
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+#image-sequence {
+  z-index: 2;
+}
+
+.sequence-img {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  opacity: 0;
+  max-width: 70%;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotateIn {
+  0% {
+    opacity: 0;
+    transform: rotate(-180deg) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+#birthday-text {
+  color: white;
+  font-size: 3rem;
+  font-family: Quicksand, sans-serif;
+  text-shadow: #bb2121 0px 10px 10px;
+  margin: 20px auto;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 5s;
+  z-index: 3;
+}
+
+h2 {
+  color: rgb(255, 0, 0);
+  font-size: 2.4rem;
+  font-family: Quicksand, sans-serif;
+  text-shadow: #bb2121 0px 10px 10px;
+  margin: 10rem auto;
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 6s;
+  z-index: 3;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+#stop-music {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 4;
+}
+#stop-music:hover {
+  background-color: #8f1414;
+}
+#stop-music:active {
+  background-color: #990000;
+}
+#stop-music:focus {
+  outline: none;
+}
+#stop-music:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+#stop-music:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+#start-music {
+  position: absolute;
+  bottom: 20px;
+  right: 100px;
+  padding: 10px 20px;
+  background-color: #3998e1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 4;
+}
+#start-music:hover {
+  background-color: #32269f;
+}
+#start-music:active {
+  background-color: #009900;
+}
+#start-music:focus {
+  outline: none;
+}
+#start-music:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+#start-music:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
